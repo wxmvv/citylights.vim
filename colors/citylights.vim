@@ -1,4 +1,4 @@
- Name:     Citylights vim colorscheme
+" Name:     Citylights vim colorscheme
 " Author:   Jeff Heaton <jeff@jgheaton.com>
 "           (adapted from Yummygum's citylights <citylights.xyz>)
 " URL:      http://github.com/saltdotac/citylights.vim
@@ -210,7 +210,7 @@ hi! StatusLine     gui=NONE guifg=#b7c5d3 guibg=#171d23
 hi! link StatusLineNC StatusLine
 hi! TabLine        gui=underline guifg=#b7c5d3 guibg=#171d23 guisp=#171d23
 hi! TabLineFill    gui=underline guifg=NONE guibg=#171d23 guisp=#171d23
-hi! TabLineSel     gui=NONE guifg=#fff guibg=#1D252C
+hi! TabLineSel     gui=NONE guifg=#ffffff guibg=#1D252C
 hi! TermCursor      gui=NONE guifg=#008B94 guibg=#008B94
 hi! Title          gui=bold guifg=#70E1E8 guibg=NONE
 hi! VertSplit      gui=NONE guifg=#1D252C guibg=NONE
@@ -220,6 +220,12 @@ hi! link Visual CursorLine
 hi! link WildMenu PmenuSel
 
 hi Terminal        guifg=#B7C5D3 guibg=#171d23
-autocmd TermOpen * setlocal winhighlight=Normal:Terminal
+" autocmd TermOpen * setlocal winhighlight=Normal:Terminal
+augroup citylights
+  autocmd!
+  if exists('##TermOpen')
+    autocmd TermOpen * setlocal winhighlight=Normal:Terminal
+  endif
+augroup END
 
 endif
