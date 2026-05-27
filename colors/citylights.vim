@@ -100,7 +100,8 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 " note that link syntax, to avoid duplicate configuration, doesn't work with the
 " exe compiled formats
 
-hi! Normal         guifg=#B7C5D3 guibg=#1D252C
+hi! Normal         guifg=#B7C5D3 guibg=NONE
+" hi! Normal         guifg=#B7C5D3 guibg=#1D252C
 
 hi! Comment        gui=italic guifg=#41505E guibg=NONE
 "   *Comment       any comment
